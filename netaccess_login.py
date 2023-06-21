@@ -21,4 +21,7 @@ driver.get('https://netaccess.iitm.ac.in/account/approve')
 approve_duration = driver.find_element('id', 'radios-2').click() # radios-1 for duration as 1 day 
 authorize_btn = driver.find_element('id', 'approveBtn').click()
 
+command = 'notify-send "Netaccess Login complete!!"'
+subprocess.run(command, shell=True)
+
 driver.quit()
